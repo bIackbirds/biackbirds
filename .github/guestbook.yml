@@ -1,26 +1,22 @@
-name: Update Guestbook
-
-on:
-  issues:
-    types: [opened]
-
-jobs:
-  update-guestbook:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
-
       - name: Update Guestbook Entries
         uses: muety/readme-guestbook@v1.0.9
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          max_entries: 10  # Change this to display more or fewer entries
-
-      - name: Commit and Push Changes
-        run: |
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
-          git add README.md
-          git commit -m "chore: update guestbook entries" || echo "No changes to commit"
-          git push
+          max_entries: 5  # Limits table size to keep your README clean
+          template: |
+            <table>
+              <tr>
+                <th>Avatar</th>
+                <th>User</th>
+                <th>Message</th>
+                <th>Date</th>
+              </tr>
+              {{#each entries}}
+              <tr>
+                <td><img src="{{this.user.avatar_url}}" width="35" height="35" style="border-radius:50%;" /></td>
+                <td><a href="{{this.user.html_url}}">@{{this.user.login}}</a></td>
+                <td>{{{this.body}}}</td>
+                <td><sub>{{this.created_at}}</sub></td>
+              </tr>
+              {{/each}}
+            </table>
