@@ -1,22 +1,4 @@
-      - name: Update Guestbook Entries
-        uses: muety/readme-guestbook@v1.0.9
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          max_entries: 5  # Limits table size to keep your README clean
-          template: |
-            <table>
-              <tr>
-                <th>Avatar</th>
-                <th>User</th>
-                <th>Message</th>
-                <th>Date</th>
-              </tr>
-              {{#each entries}}
-              <tr>
-                <td><img src="{{this.user.avatar_url}}" width="35" height="35" style="border-radius:50%;" /></td>
-                <td><a href="{{this.user.html_url}}">@{{this.user.login}}</a></td>
-                <td>{{{this.body}}}</td>
-                <td><sub>{{this.created_at}}</sub></td>
-              </tr>
-              {{/each}}
-            </table>
+   uses: muety/readme-guestbook@v1.0.9
+with:
+    token: ${{ secrets.GITHUB_TOKEN }}
+    max_entries: 5
