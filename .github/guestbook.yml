@@ -1,0 +1,26 @@
+name: Update Guestbook
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  update-guestbook:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Update Guestbook Entries
+        uses: muety/readme-guestbook@v1.0.9
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          max_entries: 10  # Change this to display more or fewer entries
+
+      - name: Commit and Push Changes
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add README.md
+          git commit -m "chore: update guestbook entries" || echo "No changes to commit"
+          git push
