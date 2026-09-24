@@ -19,7 +19,7 @@
 
 ## 📖 Guestbook
 
-[✨ Click here to sign my guestbook!](https://github.com/bIackbirds/biackbirds/issues/4)
+[🤍 Click here to sign my guestbook!](https://github.com/bIackbirds/biackbirds/issues/4)
 
 <!--START_SECTION:guestbook-->
 <!--END_SECTION:guestbook-->
