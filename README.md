@@ -17,9 +17,4 @@
   <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/biackbirds/biackbirds/output/github-contribution-grid-snake.svg">
 </picture>
 
-## 📖 𝘎𝘶𝘦𝘴𝘵𝘣𝘰𝘰𝘬
-
-[🤍 Click here to sign my guestbook!](https://github.com/biackbirds)
-
-<!--START_SECTION:guestbook-->
-<!--END_SECTION:guestbook-->
+<a href="https://github.com" target="_blank">✨ Click here to sign my guestbook!</a>
