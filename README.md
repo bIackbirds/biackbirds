@@ -17,7 +17,7 @@
 
 [Passportdex](https://passportdex.com/destroya)
 
-![](https://file.garden/asAH7JJAzcXiCdLM/ezgif-5e4314b28fad9dd5.gif)
+![](https://file.garden/asAH7JJAzcXiCdLM/ezgif-64dee479e27ac816.webp)
      
   </table>
 </div>‎
